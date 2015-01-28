@@ -2,7 +2,7 @@
 ANAC XML Viewer è un plugin WordPress in grado di generare tabelle statiche a partire da un dataset xml generato da un applicativo non-WPGov.
 
 ## DISCLAIMER
-Questo plugin ha modalità di distribuzione "chiuse". Questo non perché vogliamo proteggere chissà quale invenzione, bensì perché abbiamo sviluppato un applicativo XML open-source completo per la gestione dei bandi di gara e generazione del dataset, distruibuito tramite wordpress.org.
+Questo plugin ha modalità di distribuzione "chiuse". Questo non perché vogliamo proteggere chissà quale invenzione, bensì perché abbiamo sviluppato un applicativo XML open-source completo per la gestione dei bandi di gara e generazione del dataset, distruibuito tramite wordpress.org, e non vogliamo che questo pacchetto possa essere una pubblicità o un servizio in più per aziende "concorrenti".
 
 ## ISTRUZIONI DI INSTALLAZIONE
 
