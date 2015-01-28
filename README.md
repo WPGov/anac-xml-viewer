@@ -13,5 +13,7 @@ Chi utilizza ANAC XML Viewer è dunque consapevole che ha speso soldi in
 - Spostare la cartella tramite FTP nella directory wp-content/plugins/ del proprio sito
 - Attivare il plugin dall'omonimo menù
 - Richiedere l'attivazione di una licenza
- 
-AL MOMENTO NON E' POSSIBILE RICHIEDERE UNA LICENZA
+
+## RICHIEDERE UN CODICE DI LICENZA
+
+Al momento non forniamo codici di licenza in quanto il plugin è in fase sperimentale e chiuso a un ristretto numero di "beta-tester"
