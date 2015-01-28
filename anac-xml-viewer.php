@@ -4,7 +4,7 @@ Plugin Name: ANAC XML Importer
 Plugin URI: http://www.wpgov.it
 Description: Visualizzatore XML per file generati da applicativi non-&copy;WPGov - Tutti i diritti riservati
 Author: Marco Milesi
-Version: 1.0
+Version: 1.0.1
 Author URI: http://www.marcomilesi.ml
 GitHub Plugin URI: https://github.com/WPGov/anac-xml-viewer
 */
