@@ -7,6 +7,7 @@ Author: Marco Milesi
 Version: 1.0.1
 Author URI: http://www.marcomilesi.ml
 GitHub Plugin URI: https://github.com/WPGov/anac-xml-viewer
+GitHub Branch: master
 */
 
 add_action( 'init', 'register_cpt_anacimporter' );
