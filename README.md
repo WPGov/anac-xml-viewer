@@ -14,4 +14,4 @@ Questo plugin ha modalità di distribuzione "chiuse". Questo non perché vogliam
 
 ## RICHIEDERE UN CODICE DI LICENZA
 
-Al momento non forniamo codici di licenza in quanto il plugin è in fase sperimentale e chiuso a un ristretto numero di "beta-tester"
+m.milesi@wpgov.it

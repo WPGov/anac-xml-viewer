@@ -1,16 +1,110 @@
-#### 3.2.7
+#### 4.5.4
+* hotfix for renaming, I reverted back a bunch with more extensive testing on server. It's amazing how different renaming is locally vs on server.
+
+#### 4.5.3
+* updated language files -- oops
+
+#### 4.5.2
+* cleanup and refactor of renaming code.
+* added Romanian translation by [Corneliu Cirlan](https://github.com/corneliucirlan)
+* added Japanese translation by [ishihara](https://github.com/1shiharat)
+
+#### 4.5.1
+* fix bug so updates display without having to randomly refresh.
+
+#### 4.5.0
+* fix some PHP notices
+* add update by GitHub release asset in lieu of update by tag when asset is present
+* install asset via remote install if asset URI used
+* refactor to simplify class structure, created `abstract class API` and `class Messages`
+* add GitLab support!!
+* refactor to set all git servers and extra headers to static arrays in `Base`
+* remove checkbox when loaded as mu-plugin, props @pbearne
+
+#### 4.4.0
+* only add custom user agent once :P
+* add support of GitHub Enterprise via new `GitHub Enterprise` header
+* sanitize filter input
+* add support for parsing `readme.txt` for _View details_ information using `WordPress_Plugin_Readme_Parser` by @markjaquith
+* fixed _View details_ link to show for all cases when plugin using GitHub Updater
+* refactor creation of header parts and URIs
+
+#### 4.3.1
+* Spanish translation by [Jose Miguel Bejarano](https://github.com/xDae)
+* German translation by [Linus Metzler](https://github.com/limenet)
+* squish PHP notices
+* add custom user agent to `wp_remote_get` and tweak error message at request of GitHub ;-)
+* fixed edge case renaming bug
+
+#### 4.3.0
+* use @WPUpdatePhp `class WPUpdatePhp` for PHP version checking
+* use https://api.wordpress.org not http
+* Arabic translation by [Hyyan Abo FAkher](https://github.com/hyyan)
+* make strings better for translation - thanks @pedro-mendonca and @fxbenard
+* additional Portuguese translation by [Pedro Mendonça](https://github.com/pedro-mendonca)
+* refactor for getting local plugin and theme meta, now simpler for additional APIs (I'm thinking about you GitLab)
+* fix link in README to GitHub Link
+* correctly pass array as last argument in `add_settings_field`
+* add focus to URI input field
+* add Setting for personal GitHub Access Token to avoid API rate limit - thanks @mlteal
+* add Setting for branch switching from the Plugins page
+* add 'View details' link in Plugins page
+
+#### 4.2.2
+* fix POT and some updated languages, thanks @fxbenard
+* fix PHP notice for `$options` settings on initial install - thanks @benosman
+
+#### 4.2.1
+* add PHP version check for graceful exit
+* add to error message for 401 error.
+* save settings when remote installing a private repo
+
+#### 4.2.0
+* added minutes until reset of GitHub API's rate limit to error message
+* added `placeholder = "master"` to remote install branch text input
+* I should have made the last version 4.2.0 as I added a new feature. I'll try to be better with semantic versioning in the future. ;-)
+
+#### 4.1.4
+* add message to certain admin pages when API returns HTTP error code
+* update POT to remove HTML entity codes from strings and generally try to make i18n better
+* Swedish translation by [Andréas Lundgren](https://github.com/Adevade)
+* added logo to README and Settings page
+
+#### 4.1.3
+* use `strtolower` comparison of plugin directory and repo name. This might is an issue related to the manual installation of a plugin before any update might occur. This allows the **View details** screen to display in these instances where the case of the directory and repo aren't identical. This doesn't work for themes.
+
+#### 4.1.2
+* hide star ratings from **View details** screen for private repos
+
+#### 4.1.1
+* add `plugin` to `$response` in `Plugin::pre_set_site_transient_update_plugins` to fix PHP Notice
+* rename `classes` to `src` to follow more conventional naming
+* refactor renaming code to function under all circumstances, I hope ;-)
+
+#### 4.1.0
+* added remote installation of plugins or themes, both public and private
+* remote installation using either full URI or short `<owner><repo>` format
+* created new tabbed interface for settings
+* added another screenshot to readme
+* I'd like to apologize to all my translators for adding new strings often, you guys are great, thanks!
+
+#### 4.0.1
+* hotfix to force an array type when sanitizing settings, it gave me a fatal I wasn't expecting.
+
+#### 4.0.0
 * changed `is_a()` to `instanceof` per https://core.trac.wordpress.org/changeset/31188
+* requires PHP 5.3 or greater as autoloader class requires namespacing 
+* updated all classes for namespacing
+* renamed directory and class names to allow for PSR 4 style loading 
+* clean up a number of foreach loops where I was only using either key or value, not both
+* Special thanks for all my translators, especially @grappler for adding translation key for description
+* bugfix to correctly pick CHANGES.MD or CHANGELOG.MD regardless of case
+* removed reading/saving `GitHub Access Token` header into settings. Must use Settings Page.
 
-#### 3.2.6
+#### 3.2.3 - 3.2.6
 * added French translation by @daniel-menard
-
-#### 3.2.5
 * added Italian translation by @overclokk
-
-#### 3.2.4
 * added Portuguese translation by @valeriosouza
-
-#### 3.2.3
 * added Ukrainian translation by @andriiryzhkov (our first translation!!)
 
 #### 3.2.2
