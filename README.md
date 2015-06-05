@@ -14,4 +14,9 @@ Questo plugin ha modalità di distribuzione "chiuse". Questo non perché vogliam
 
 ## RICHIEDERE UN CODICE DI LICENZA
 
-m.milesi@wpgov.it
+Puoi ottenere un codice di licenza scrivendo a m.milesi@wpgov.it
+Se rappresenti una scuola, utilizza l'email ufficiale @istruzione.it
+
+In ogni caso è consigliabile invitare a fare la richiesta direttamente il Responsabile dell'ente
+
+Il rilascio o meno di un codice di attivazione dipende da più fattori
