@@ -4,7 +4,7 @@ Plugin Name: ANAC XML Importer
 Plugin URI: http://www.wpgov.it
 Description: Visualizzatore XML per file generati da applicativi non-&copy;WPGov - Tutti i diritti riservati
 Author: Marco Milesi
-Version: 1.0.4
+Version: 1.1
 Author URI: http://www.marcomilesi.ml
 GitHub Plugin URI: https://github.com/WPGov/anac-xml-viewer
 GitHub Branch: master
@@ -15,7 +15,7 @@ add_action( 'init', 'register_cpt_anacimporter' );
 function register_cpt_anacimporter() {
 
     $labels = array(
-        'name' => _x( 'Importa un dataset XML di terze parti (genera una tabella statica)', 'avcp' ),
+        'name' => _x( 'ANAC XML Viewer &copy; WPGov.it', 'avcp' ),
         'singular_name' => _x( 'Dataset XML', 'avcp' ),
         'add_new' => _x( 'Nuovo Dataset', 'avcp' ),
         'add_new_item' => _x( 'Nuovo Dataset', 'avcp' ),
@@ -26,7 +26,7 @@ function register_cpt_anacimporter() {
         'not_found' => _x( 'Nessuna voce trovata', 'avcp' ),
         'not_found_in_trash' => _x( 'Nessuna voce trovata', 'avcp' ),
         'parent_item_colon' => _x( 'Parent:', 'avcp' ),
-        'menu_name' => _x( 'XML Esterni', 'avcp' ),
+        'menu_name' => _x( 'Anac XML Viewer', 'avcp' ),
     );
 
     if ( is_admin && (!function_exists( 'is_plugin_active' ) ) ) {
