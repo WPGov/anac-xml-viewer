@@ -1,13 +1,11 @@
 <?php
 /*
-Plugin Name: ANAC XML Importer
-Plugin URI: http://www.wpgov.it
-Description: Visualizzatore XML per file generati da applicativi non-&copy;WPGov - Tutti i diritti riservati
+Plugin Name: ANAC XML Viewer
+Plugin URI: https://wordpress.org/plugins/anac-xml-viewer/
+Description: Visualizzatore XML per file generati da applicativi esterni
 Author: Marco Milesi
-Version: 1.1
-Author URI: http://www.marcomilesi.ml
-GitHub Plugin URI: https://github.com/WPGov/anac-xml-viewer
-GitHub Branch: master
+Version: 1.7.1
+Author URI: https://marcomilesi.com
 */
 
 add_action( 'init', 'register_cpt_anacimporter' );
@@ -15,28 +13,19 @@ add_action( 'init', 'register_cpt_anacimporter' );
 function register_cpt_anacimporter() {
 
     $labels = array(
-        'name' => _x( 'ANAC XML Viewer &copy; WPGov.it', 'avcp' ),
-        'singular_name' => _x( 'Dataset XML', 'avcp' ),
-        'add_new' => _x( 'Nuovo Dataset', 'avcp' ),
-        'add_new_item' => _x( 'Nuovo Dataset', 'avcp' ),
-        'edit_item' => _x( 'Modifica Dataset', 'avcp' ),
-        'new_item' => _x( 'Nuovo Dataset', 'avcp' ),
-        'view_item' => _x( 'Vedi Dataset', 'avcp' ),
-        'search_items' => _x( 'Cerca Dataset', 'avcp' ),
-        'not_found' => _x( 'Nessuna voce trovata', 'avcp' ),
-        'not_found_in_trash' => _x( 'Nessuna voce trovata', 'avcp' ),
-        'parent_item_colon' => _x( 'Parent:', 'avcp' ),
-        'menu_name' => _x( 'Anac XML Viewer', 'avcp' ),
+        'name' => 'Visualizzatore dataset XML Anac',
+        'singular_name' => 'Dataset XML',
+        'add_new' => 'Nuovo Dataset',
+        'add_new_item' => 'Importa Nuovo Dataset',
+        'edit_item' => 'Modifica Dataset',
+        'new_item' => 'Nuovo Dataset',
+        'view_item' => 'Vedi Dataset',
+        'search_items' => 'Cerca Dataset',
+        'not_found' => 'Nessuna voce trovata',
+        'not_found_in_trash' => 'Nessuna voce trovata',
+        'parent_item_colon' => 'Parent:',
+        'menu_name' => 'Anac XML',
     );
-
-    if ( is_admin && (!function_exists( 'is_plugin_active' ) ) ) {
-        require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
-        if ( is_plugin_active( 'avcp/avcp.php' ) ) {
-            $showinmenu = 'edit.php?post_type=avcp';
-        } else {
-            $showinmenu = true;
-        }
-    }
 
     $args = array(
         'labels' => $labels,
@@ -45,8 +34,8 @@ function register_cpt_anacimporter() {
         'supports' => array( 'title', 'editor'),
         'public' => true,
         'show_ui' => true,
-        'show_in_menu' => $showinmenu,
-        'menu_position' => 39,
+        'show_in_menu' => true,
+        'menu_position' => 37,
         'menu_icon'    => 'dashicons-list-view',
         'show_in_nav_menus' => false,
         'publicly_queryable' => true,
@@ -59,12 +48,41 @@ function register_cpt_anacimporter() {
 
     register_post_type( 'anac-xml-view', $args );
 }
-    require_once(plugin_dir_path(__FILE__) . 'core.php');
+require_once(plugin_dir_path(__FILE__) . 'core.php');
 
-function axv_init() {
-    if ( !class_exists('Fragen\GitHub_Updater\Autoloader') ) {
-       require_once(plugin_dir_path(__FILE__) . 'github/github-updater.php');
+add_action( 'admin_notices', function() {
+    global $current_screen;
+    if ( 'anac-xml-view' == $current_screen->post_type  ) {
+        echo '
+        <div class="notice">
+            <p>Puoi importare un file XML copiando e incollando il contenuto o inserendo un indirizzo URL completo. Tutorial: <a href="https://youtu.be/cdn082kZogk" target="_blank">youtu.be/cdn082kZogk</a></p>
+        </div>';
+    }
+}  );
+
+function axv_columns($columns) {
+    $columns['atype'] = 'Dettagli';
+    unset($columns['date']);
+    $columns['date'] = 'Data';
+    return $columns;
+}
+add_filter('manage_edit-anac-xml-view_columns', 'axv_columns');
+
+add_filter('bulk_actions-edit-anac-xml-view', '__return_empty_array');
+
+add_action('manage_anac-xml-view_posts_custom_column', 'axv_manage_columns', 10, 2);
+function axv_manage_columns($column, $post_id)
+{
+    global $post;
+    switch ($column) {
+        case 'atype':
+            if ( substr( get_post_field('post_content', $post_id), 0, 4 ) === "http" ) {
+                printf(  '<a target="_blank" href="'.get_post_field('post_content', $post_id ).'">'.get_post_field('post_content', $post_id ).'</a><br>' );
+            }
+            printf( 'Shortcode: [anac-xml id="' . $post_id . '"]');
+            break;
+        default:
+            break;
     }
 }
-add_action('admin_init', 'axv_init');
 ?>

