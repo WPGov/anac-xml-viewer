@@ -3,9 +3,9 @@ Contributors: Milmor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F2JK36SCXKTE2
 Tags: amministrazione, anac, xml, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 4.3
-Tested up to: 6.6
-Version: 1.7.1
-Stable tag: 1.7.1
+Tested up to: 6.9
+Version: 1.8.0
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,7 +37,13 @@ https://www.youtube.com/watch?v=cdn082kZogk
 4. Esempio tabella generata
 
 == Changelog ==
+
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= 1.8 2025-05-27 =
+* Refactoring del plugin in ottica object-oriented (OOP).
+* Eliminati funzioni e variabili globali, salvo dove richiesto da WordPress.
+* Miglioramenti vari
 
 = Version 1.7.1 2025-05-25 =
 * Test di compatibilità
