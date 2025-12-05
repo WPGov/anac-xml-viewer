@@ -4,7 +4,7 @@ Plugin Name: ANAC XML Viewer
 Plugin URI: https://wordpress.org/plugins/anac-xml-viewer/
 Description: Visualizzatore XML per file generati da applicativi esterni
 Author: Marco Milesi
-Version: 1.8.1
+Version: 1.8.2
 Author URI: https://marcomilesi.com
 */
 
@@ -139,9 +139,18 @@ class ANAC_XML_Viewer {
         $time_start = microtime(true);
 
         if ( substr( $content, 0, 4 ) === "http" ) {
-            $gare_xml = new SimpleXMLElement( $content, LIBXML_NOCDATA, true );
+            $gare_xml = $this->fetch_and_load_xml( $content );
+            if ( $gare_xml === null ) {
+                echo '<div class="notice notice-error"><p>Impossibile caricare XML. Assicurarsi che l\'URL esista e che il contenuto sia XML valido.</p></div>';
+                return;
+            }
         } else {
-            $gare_xml = new SimpleXMLElement( stripslashes($content) );
+            try {
+                $gare_xml = new SimpleXMLElement( stripslashes($content) );
+            } catch ( Exception $e ) {
+                echo '<div class="notice notice-error"><p>Il contenuto inserito non è XML valido.</p></div>';
+                return;
+            }
         }
 
         echo '<script type="text/javascript" src="' . plugin_dir_url(__FILE__) . 'includes/excellentexport.min.js"></script>';
@@ -259,6 +268,81 @@ class ANAC_XML_Viewer {
         })(document);
         </script>
         <?php
+    }
+
+    private function is_private_ip( $ip ) {
+        if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
+            $long = ip2long($ip);
+            $ranges = [
+                ['0.0.0.0', '0.255.255.255'],
+                ['10.0.0.0', '10.255.255.255'],
+                ['127.0.0.0', '127.255.255.255'],
+                ['169.254.0.0', '169.254.255.255'],
+                ['172.16.0.0', '172.31.255.255'],
+                ['192.168.0.0', '192.168.255.255']
+            ];
+            foreach ( $ranges as $r ) {
+                if ( $long >= ip2long($r[0]) && $long <= ip2long($r[1]) ) return true;
+            }
+            return false;
+        }
+        if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6 ) ) {
+            if ( strpos($ip, '::1') === 0 ) return true; // localhost
+            // fc00::/7 unique local, fe80::/10 link-local
+            if ( strpos($ip, 'fc') === 0 || strpos($ip, 'fd') === 0 ) return true;
+            if ( strpos($ip, 'fe80') === 0 ) return true;
+            return false;
+        }
+        return true;
+    }
+
+    private function fetch_and_load_xml( $url ) {
+        if ( ! function_exists('wp_http_validate_url') || ! wp_http_validate_url( $url ) ) return null;
+        $parts = wp_parse_url( $url );
+        if ( ! $parts || ! isset($parts['scheme']) || ! in_array( strtolower($parts['scheme']), ['http','https'], true ) ) return null;
+        if ( empty($parts['host']) ) return null;
+
+        $host = $parts['host'];
+        $blocked_hosts = [
+            '169.254.169.254',
+            'metadata.google.internal'
+        ];
+        if ( in_array( strtolower($host), $blocked_hosts, true ) ) return null;
+
+        $resolved = gethostbynamel( $host );
+        if ( $resolved ) {
+            foreach ( $resolved as $ip ) {
+                if ( $this->is_private_ip( $ip ) ) return null;
+            }
+        }
+
+        $args = [
+            'timeout' => 5,
+            'redirection' => 2,
+            'headers' => [ 'Accept' => 'application/xml, text/xml; q=0.9, */*; q=0.1' ],
+        ];
+        $response = wp_remote_get( $url, $args );
+        if ( is_wp_error( $response ) ) return null;
+
+        $code = wp_remote_retrieve_response_code( $response );
+        if ( $code < 200 || $code >= 300 ) return null;
+
+        $body = wp_remote_retrieve_body( $response );
+        if ( ! $body ) return null;
+
+        $ctype = wp_remote_retrieve_header( $response, 'content-type' );
+        if ( $ctype && strpos( strtolower($ctype), 'xml' ) === false ) {
+            // Allow if body looks like XML even when header is wrong
+            if ( strpos( ltrim($body), '<') !== 0 ) return null;
+        }
+
+        libxml_use_internal_errors(true);
+        try {
+            $xml = new SimpleXMLElement( $body );
+            return $xml;
+        } catch ( Exception $e ) {
+            return null;
+        }
     }
 
     public function template_redirect() {
