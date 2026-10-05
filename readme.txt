@@ -1,9 +1,9 @@
 ﻿=== ANAC XML Viewer ===
 Contributors: Milmor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F2JK36SCXKTE2
-Tags: amministrazione, anac, xml, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
+Tags: anac, xml, trasparenza, appalti, pubblica amministrazione
 Requires at least: 4.3
-Tested up to: 6.9
+Tested up to: 7.2
 Version: 1.8.3
 Stable tag: 1.8.3
 License: GPLv2 or later
