@@ -1,0 +1,8 @@
+/.git
+/.github
+/.wordpress-org
+/.claude
+.distignore
+.gitattributes
+.gitignore
+README.md
