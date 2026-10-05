@@ -9,8 +9,6 @@
 
 WordPress plugin for Italian public administrations that renders XML datasets in the ANAC format (ex AVCP, art. 1 c. 32 L. 190/2012) as a searchable table.
 
-> Since January 1, 2024 the annual XML dataset is no longer required: contract transparency goes through the ANAC national database (BDNCP). The plugin remains useful to keep the historical datasets published in "Amministrazione Trasparente".
-
 ## Features
 
 - Import a dataset by pasting the XML content or a full URL to the file
