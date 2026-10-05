@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: anac, xml, trasparenza, appalti, pubblica amministrazione
 Requires at least: 4.3
 Tested up to: 7.2
-Version: 1.8.3
-Stable tag: 1.8.3
+Version: 1.8.4
+Stable tag: 1.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,10 @@ https://www.youtube.com/watch?v=cdn082kZogk
 == Changelog ==
 
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= 1.8.4 2026-10-05 =
+* Fixed: removed broken logo image from the table footer
+* Improved: tested up to WordPress 7.2
 
 = 1.8.3 2026-01-19 =
 * Bugfix minori e sicurezza

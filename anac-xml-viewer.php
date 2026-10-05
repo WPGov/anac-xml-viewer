@@ -4,7 +4,7 @@ Plugin Name: ANAC XML Viewer
 Plugin URI: https://wordpress.org/plugins/anac-xml-viewer/
 Description: Visualizzatore XML per file generati da applicativi esterni
 Author: Marco Milesi
-Version: 1.8.3
+Version: 1.8.4
 Author URI: https://marcomilesi.com
 */
 
